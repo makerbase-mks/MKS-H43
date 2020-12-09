@@ -1,0 +1,36 @@
+// AUTOMATICALLY GENERATED FILE. PLEASE DO NOT MODIFY IT MANUALLY
+
+// PIO Unified Debugger
+//
+// Documentation: https://docs.platformio.org/page/plus/debugging.html
+// Configuration: https://docs.platformio.org/page/projectconf/section_env_debug.html
+
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "platformio-debug",
+            "request": "launch",
+            "name": "PIO Debug",
+            "executable": "f:/sola_github/MKS_DGUS/MKS_DGUS_Marlin/Marlin-bugfix-2.0.x/Marlin-bugfix-2.0.x/.pio/build/LPC1768/firmware.elf",
+            "projectEnvName": "LPC1768",
+            "toolchainBinDir": "C:/Users/Administrator.USER-20191219ZU/.platformio/packages/toolchain-gccarmnoneeabi/bin",
+            "svdPath": "C:/Users/Administrator.USER-20191219ZU/.platformio/platforms/nxplpc-arduino-lpc176x/misc/svd/LPC176x5x_v0.2.svd",
+            "preLaunchTask": {
+                "type": "PlatformIO",
+                "task": "Pre-Debug (LPC1768)"
+            },
+            "internalConsoleOptions": "openOnSessionStart"
+        },
+        {
+            "type": "platformio-debug",
+            "request": "launch",
+            "name": "PIO Debug (skip Pre-Debug)",
+            "executable": "f:/sola_github/MKS_DGUS/MKS_DGUS_Marlin/Marlin-bugfix-2.0.x/Marlin-bugfix-2.0.x/.pio/build/LPC1768/firmware.elf",
+            "projectEnvName": "LPC1768",
+            "toolchainBinDir": "C:/Users/Administrator.USER-20191219ZU/.platformio/packages/toolchain-gccarmnoneeabi/bin",
+            "svdPath": "C:/Users/Administrator.USER-20191219ZU/.platformio/platforms/nxplpc-arduino-lpc176x/misc/svd/LPC176x5x_v0.2.svd",
+            "internalConsoleOptions": "openOnSessionStart"
+        }
+    ]
+}
