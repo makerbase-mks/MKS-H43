@@ -24,3 +24,22 @@ __________________________________________________________________________
 __________________________________________________________________________
 ```
 
+# Hardware
+MKS H43 is a serial LCD, it use the TTL-uart to communicate with mainboard.
+
+# Software
+
+
+# WIKI
+## Use MKS H43 with RAMPS 1.4 board
+## Use MKS H43 with MKS GEN_L board
+## Use MKS H43 with MKS SGEN_L board
+## Use MKS H43 with MKS Robin Nano V1.2/V2.0 board
+## Use MKS H43 with MKS Robin Nano V3.0 board
+## Use MKS H43 with MKS Robin E3/E3D/E3P board
+
+
+
+
+
+
