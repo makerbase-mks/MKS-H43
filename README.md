@@ -15,19 +15,19 @@ _________________________________________________________________________
                                  MKS SGEN_L
                                  MKS Robin Nano Series          
                                  MKS Robin E3/E3D/E3P
-    Mainboard supports           BTT SKR Series
+    Mainboard support            BTT SKR Series
                                  ...
-                                 (Theoretically support all motherboards
-                                 with serial communication)
+                                 (Theoretically support all mainboards with
+                                 serial communication and running marlin V2.X firmware)
 __________________________________________________________________________
    Communicate Protocol          DWIN DGUS
 __________________________________________________________________________
 ```
 
-# Hardware
-MKS H43 is a serial LCD, it use the TTL-uart to communicate with mainboard.
+# Mainboard support
+MKS H43 is a serial LCD, it uses the TTL-uart to communicate with mainboard. So in theory, MKS H43 supports all mainboard with serial communication and running marlin V2.X firmware. As there are so many types of 3d printer mainboards, different mainboard has different uart available and unavailabe, so we make some test of the compatibility of MKS H43 and some mainboards, please refer to the wiki page.
 
-# Software
+# How to use
 
 
 # WIKI
