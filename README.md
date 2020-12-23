@@ -32,8 +32,8 @@ MKS H43 is a serial LCD, it uses the TTL-UART to communicate with mainboard. So 
 ## Hardware connect
 As we mentioned above, MKS H43 just use TTL-uart to connect to the mainboard, and we make several type of adapter boards to connect different mainboards. Details for the usage please refer to wiki.
 ## Marlin Config
-1. We have added the mks dwin package to Marlin V2 firmware, you can download it from:https://github.com/makerbase-mks/Marlin-2.x.x.
-2. Just modify the board type on the "platformio.ini" to your mainboard type, just like:
+1. We have added the mks dwin package to Marlin V2 firmware, you can download it from : https://github.com/makerbase-mks/Marlin-V2.X-MKS-H43. At the time of writing this article, Marlin officially has not merged the support of MKS H43. 
+2. Just modify the board type on the "platformio.ini" according to your mainboard type, just like:
 ```
 default_envs = mks_robin_nano
 ```
@@ -57,7 +57,7 @@ note:
 
 ## Customize MKS H43 UI and function
 If you want to customize your own UI on MKS H43, or modify some functions, you can using the "DGUS designer" to make it:
-1. Download the two folders "MKS_H43_DGUS" and "MKS_H43_Tool" from GitHub.
+1. Download the two folders "MKS_H43_DGUS" and "MKS_H43_Tool" from https://github.com/makerbase-mks/MKS-H43-firmware.
 2. In the "MKS_H43_Tool" folder, unzip the DGUS designer, find "DGUS Tool V7.597.exe" and run it directly. Open the .hmi file in the "MKS_H43_DGUS" folder through the designer, you can directly open the H43 interface project.
 3. Open "MKS_H43_DGUS", find the folder DWIN_SET and open it.
 4. Modify the corresponding name and replace the picture you have prepared.
