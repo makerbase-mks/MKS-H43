@@ -47,9 +47,11 @@ The reason we added RJ11 socket is to allow users to use a spring wire (the micr
 What have to be aware of is: As the MKS H43 communicates with the motherboard using DWIN DGUS protocol, which is different from the simple gcode commands, so the motherboard should use a serial port different from the PC connection to connect to MKS H43, unless you don’t need PC control. So maybe your motherboard has the "AUX-1" socket, but if it shares the same serial port with the PC connection, you cannot connect at the same time.
 
 There are many situations for different motherboards:
-- With independent AUX-1 interface, such as MKS SGEN_L V1/V2, you can use Adaptor-B adapter board
-- The AUX-1 interface is not an independent serial port, but it has EXP1/EXP2 at the same time, and has a set of independent serial ports, such as MKS GEN_L / RAMPS1.4, which can use the Adaptor-A adapter board
-- AUX-1 and EXP1/EXP2 do not have independent serial ports, but there are independent serial ports with other forms of interfaces. You can use the Adaptor-B adapter board and use the corresponding cable to switch, such as Creality3D V1.1.4 / MKS Robin Nano V1/ V2/V3
+- With independent serial on AUX-1 interface, such as MKS SGEN_L V1/V2, you can use Adaptor-B adapter board
+- With independent serial on EXP1/EXP2 interface, such as MKS GEN_L / RAMPS1.4, which can use the Adaptor-A adapter board
+- Without independent serial ports on AUX-1 or EXP1/EXP2, but there are independent serial ports with other forms of interfaces. You can use the Adaptor-B adapter board and use the corresponding cable to switch, such as Creality3D V1.1.4 / MKS Robin Nano V1/V2/V3
+- Only with the shared serial with PC connection, you can only use MKS H43 without PC connection.
+- No serial interface(very rare), cannot use MKS H43
 
 And for different boards, we made the detail connection on **WIKI**.
 
