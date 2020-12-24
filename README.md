@@ -49,11 +49,11 @@ What have to be aware of is: As the MKS H43 communicates with the motherboard us
 There are many situations for different motherboards:
 - With independent serial on AUX-1 interface, such as MKS SGEN_L V1/V2, you can use Adaptor-B adapter board
 - With independent serial on EXP1/EXP2 interface, such as MKS GEN_L / RAMPS1.4, which can use the Adaptor-A adapter board
-- Without independent serial ports on AUX-1 or EXP1/EXP2, but there are independent serial ports with other forms of interfaces. You can use the Adaptor-B adapter board and use the corresponding cable to switch, such as Creality3D V1.1.4 / MKS Robin Nano V1/V2/V3
+- Without independent serial ports on AUX-1 or EXP1/EXP2, but there are independent serial ports with other forms of interfaces. You can use the Adaptor-B adapter board and use the corresponding cable to switch, such as Creality3D V1.1.4 / MKS Robin Nano V1/V2/V3 / BTT SKR V1.3/V1.4
 - Only with the shared serial with PC connection, you can only use MKS H43 without PC connection.
 - No serial interface(very rare), cannot use MKS H43
 
-And for different boards, we made the detail connection on **WIKI**.
+And for different motherboards, you can refer to the detail connection and configuration on **WIKI**.
 
 The hardware information of MKS H43 and adaptor boards, you can refer to : https://github.com/makerbase-mks/MKS-H43/tree/main/hardware.
 
