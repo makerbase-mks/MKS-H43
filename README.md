@@ -93,10 +93,10 @@ Select the Select Pictures button, select all the pictures in the folder, and th
 7. For the function modification of H43, you can continue to add or delete corresponding function controls based on our DGUS project through the DGUS designer. In the H43 project opened by VScode, you can find the two files in the "Marlin/src/lcd/extui/lib/dgus/mks" path and the six files in the upper-level directory, all of which are H43. The functions are mainly concentrated in the file "DGUSScreenHandle.cpp".
 8. In the DGUS designer, the size and position of the control can be freely placed, but the information of the control cannot be changed at will. After changing the size and position of the control, you need to find Generate and click in the File at the top of the designer. After generation, find the files "13TouchFile.bin", "14ShowFile.bin" and "22_Config.bin" in the DWIN_SET folder under the project, and put these files into the DWIN_SET folder in the TF card. Insert the TF card when H43 is powered off, then power on H43 and wait for END to appear! If the word is displayed, the TF card can be removed after power off, and the update is completed when power on again.
 
-note:
-1). When you are in the picture, you need to open the project first, otherwise the path you go to when you click DWIN ICL Generator is not in the DWIN_SET folder.
-2) During the update process, H43 cannot be powered off directly, and can be powered off only after the update is completed.
-3) When H43 modifies the control by itself, do not modify the important attributes such as the ID of the control, and only drag or zoom in and out of the control will not affect the motherboard code.
+Note:
+- When you are in the picture, you need to open the project first, otherwise the path you go to when you click DWIN ICL Generator is not in the DWIN_SET folder.
+- During the update process, H43 cannot be powered off directly, and can be powered off only after the update is completed.
+- When H43 modifies the control by itself, do not modify the important attributes such as the ID of the control, and only drag or zoom in and out of the control will not affect the motherboard code.
 
 
 # WIKI
