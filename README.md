@@ -1,5 +1,5 @@
 # MKS-H43
-MKS H43 is a 4.3-inch high-definition IPS display with a resolution of 800*480 and uses a capacitive touch screen. It is a high-end screen, which is very suitable for 3D printer upgrades.
+MKS H43 is a 4.3-inch high-definition IPS display with a resolution of 800*480 and uses a capacitive touch screen. It is a high-end screen, which be adapted to most FDM 3D printer motherboards on the market， very suitable for 3D printer upgrades.
 
 # Feathers
 ```
@@ -10,30 +10,55 @@ _________________________________________________________________________
 _________________________________________________________________________
    LCD material                  IPS
 _________________________________________________________________________
-   Interface with mainboard      RJ11/AUX-1(Uart TTL)
+   Interface with motherboard    RJ11/AUX-1(Uart TTL)
 _________________________________________________________________________
                                  MKS SGEN_L
                                  MKS Robin Nano Series          
                                  MKS Robin E3/E3D/E3P
-                                 Creality V1.1.4(Ender3/Ender5 raw board)
-    Mainboard support            BTT SKR Series
+                                 Creality3D V1.1.4(Ender3/Ender5 raw board)
+    Motherboards support         BTT SKR Series
                                  ...
-                                 (Theoretically support all mainboards with
+                                 (Theoretically support all motherboards with
                                  serial communication and running marlin V2.X firmware)
 __________________________________________________________________________
    Communicate Protocol          DWIN DGUS
 __________________________________________________________________________
 ```
 
-# Mainboard support
-MKS H43 is a serial LCD, it uses the TTL-UART to communicate with mainboard. So in theory, MKS H43 supports all mainboard with serial communication and running marlin V2.X firmware. As there are so many types of 3d printer mainboards, different mainboard has different uart available and unavailabe, so we make some test of the compatibility of MKS H43 and some mainboards, please refer to the wiki page.
+# Motherboards support
+MKS H43 is a serial LCD, it uses the TTL-UART to communicate with motherboards. So in theory, MKS H43 supports all motherboards with serial communication and running marlin V2.X firmware. As there are so many types of 3d printer motherboards, different motherboard has different uart available and unavailabe, so we make some test of the compatibility of MKS H43 and some motherboards, please refer to the **wiki page**.
 
 # How to use
 ## Hardware connect
-As we mentioned above, MKS H43 just use TTL-uart to connect to the mainboard, and we make several type of adapter boards to connect different mainboards. Details for the usage please refer to wiki.
+As we mentioned above, MKS H43 just uses TTL-UART to connect to the motherboard, in fact the 4 pin signals are:
+```
+DC5V
+GND
+UART-TX
+UART-RX
+```
+And we designed two types of uart sockets on MKS H43: one AUX and one RJ11. We also made two type of adapter boards for connecting different motherboards: 
+```
+MKS H43 Apdator-A: Convert from RJ11 to AUX-1 interface of most motherboards, and EXP1 of Creality3D V1.1.4
+MKS H43 Apdator-B. Convert from RJ11/AUX to EXP1/EXP2 interface of most motherboards, it also extends a SD socket
+```
+The reason we added RJ11 socket is to allow users to use a spring wire (the microphone cable of an old telephone) to connect to the screen, so that the screen can be easily manipulated and placed.
+
+What have to be aware of is: As the MKS H43 communicates with the motherboard using DWIN DGUS protocol, which is different from the simple gcode commands, so the motherboard should use a serial port different from the PC connection to connect to MKS H43, unless you don’t need PC control. So maybe your motherboard has the "AUX-1" socket, but if it shares the same serial port with the PC connection, you cannot connect at the same time.
+
+There are many situations for different motherboards:
+- With independent AUX-1 interface, such as MKS SGEN_L V1/V2, you can use Adaptor-A adapter board
+- The AUX-1 interface is not an independent serial port, but it has EXP1/EXP2 at the same time, and has a set of independent serial ports, such as MKS GEN_L / RAMPS1.4, which can use the Adaptor-B adapter board
+- AUX-1 and EXP1/EXP2 do not have independent serial ports, but there are independent serial ports with other forms of interfaces. You can use the Adaptor-A adapter board and use the corresponding cable to switch, such as Creality3D V1.1.4 / MKS Robin Nano V1/ V2/V3
+
+And for different boards, we made the detail connection on **WIKI**.
+
+The hardware information of MKS H43 and adaptor boards, you can refer to : https://github.com/makerbase-mks/MKS-H43/tree/main/hardware.
+
+
 ## Marlin Config
-1. We have added the mks dwin package to Marlin V2 firmware, you can download it from : https://github.com/makerbase-mks/Marlin-V2.X-MKS-H43. At the time of writing this article, Marlin officially has not merged the support of MKS H43. 
-2. Just modify the board type on the "platformio.ini" according to your mainboard type, just like:
+1. We have added the mks dwin package to Marlin V2 firmware, you can download it from : https://github.com/makerbase-mks/Marlin-V2.X-MKS-H43. At the time of writing this article, Marlin officially has not merged the support of MKS H43, after Marlin merge, you can directly use the official PR.
+2. Just modify the board type on the "platformio.ini" according to your motherboard type, just like:
 ```
 default_envs = mks_robin_nano
 ```
@@ -41,11 +66,10 @@ default_envs = mks_robin_nano
 - Open the "Configuration.h" file, find "DGUS_LCD_UI_MKS" and enable it,
 - Open the "Configuration_adv.h" file, find "LCD_SERIAL_PORT", and configure the serial port number used to connect to H43. Please make sure that "LCD_SERIAL_PORT" should be different with the "SERIAL_PORT" in "Configuration.h", as "SERIAL_PORT" is used to communicate with the PC. And the baudrate should be set to 115200 by default.
 
-then re-compile the source code, and update your mainboard.
-After refresh the firmware, you can use the MKS H43 to display and touch now!
+After config other options according to your machine, compile the source code, and update your motherboard. Then you can use the MKS H43 to display and touch!
 
 ## Update the firmware of MKS H43
-The firmware of MKS H43 has been burned before leaving the factory, so it is generally not necessary to update the firmware. But if you need to change the firmware version, or you want to customized the display interface, you can update according to the following method:
+The firmware of MKS H43 has been burned before leaving the factory, so it is generally not necessary to update the firmware. But if you need to update the firmware version, or you want to customize the display interface, you can update according to the following method:
 1. Prepare a TF card, format the TF card into FAT32 format, with 4096 bytes aligned.
 2. Download the MKS_DGUS_Desier file on GitHub xxx, enter the folder and there will be a "DEWIN_SET" folder, copy "DEWIN_SET" into the TF card.
 3. Power off the MKS H43, insert the TF card into MKS H43, and reboot it. An automatic update interface will appear on LCD. Waiting for the screen to display the word “end” which indicates that the update is successful. Generally, the update time is within 1 min.
