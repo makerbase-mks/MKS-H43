@@ -39,17 +39,17 @@ UART-RX
 ```
 And we designed two types of uart sockets on MKS H43: one AUX and one RJ11. We also made two type of adapter boards for connecting different motherboards: 
 ```
-MKS H43 Apdator-A: Convert from RJ11 to AUX-1 interface of most motherboards, and EXP1 of Creality3D V1.1.4
-MKS H43 Apdator-B. Convert from RJ11/AUX to EXP1/EXP2 interface of most motherboards, it also extends a SD socket
+MKS H43 Apdator-A: Convert from RJ11/AUX to EXP1/EXP2 interface of most motherboards, it also extends a SD socket
+MKS H43 Apdator-B: Convert from RJ11 to AUX-1 interface of most motherboards, and EXP1 of Creality3D V1.1.4 
 ```
 The reason we added RJ11 socket is to allow users to use a spring wire (the microphone cable of an old telephone) to connect to the screen, so that the screen can be easily manipulated and placed.
 
 What have to be aware of is: As the MKS H43 communicates with the motherboard using DWIN DGUS protocol, which is different from the simple gcode commands, so the motherboard should use a serial port different from the PC connection to connect to MKS H43, unless you don’t need PC control. So maybe your motherboard has the "AUX-1" socket, but if it shares the same serial port with the PC connection, you cannot connect at the same time.
 
 There are many situations for different motherboards:
-- With independent AUX-1 interface, such as MKS SGEN_L V1/V2, you can use Adaptor-A adapter board
-- The AUX-1 interface is not an independent serial port, but it has EXP1/EXP2 at the same time, and has a set of independent serial ports, such as MKS GEN_L / RAMPS1.4, which can use the Adaptor-B adapter board
-- AUX-1 and EXP1/EXP2 do not have independent serial ports, but there are independent serial ports with other forms of interfaces. You can use the Adaptor-A adapter board and use the corresponding cable to switch, such as Creality3D V1.1.4 / MKS Robin Nano V1/ V2/V3
+- With independent AUX-1 interface, such as MKS SGEN_L V1/V2, you can use Adaptor-B adapter board
+- The AUX-1 interface is not an independent serial port, but it has EXP1/EXP2 at the same time, and has a set of independent serial ports, such as MKS GEN_L / RAMPS1.4, which can use the Adaptor-A adapter board
+- AUX-1 and EXP1/EXP2 do not have independent serial ports, but there are independent serial ports with other forms of interfaces. You can use the Adaptor-B adapter board and use the corresponding cable to switch, such as Creality3D V1.1.4 / MKS Robin Nano V1/ V2/V3
 
 And for different boards, we made the detail connection on **WIKI**.
 
@@ -77,7 +77,7 @@ The firmware of MKS H43 has been burned before leaving the factory, so it is gen
 note:
 1. The insertion and removal of the TF card needs to be done when the power is off.
 2. During the TF card update process, do not directly unplug the TF card, which will easily cause the firmware to be destroyed.
-3. If the LCD doesn't display the blue update interface after the update begin, you should check whether the file name is wrong. 
+3. If the LCD doesn't display the blue update interface after the update begin, you should check whether the name of folder is wrong. 
 
 ## Customize MKS H43 UI and function
 If you want to customize your own UI on MKS H43, or modify some functions, you can using the "DGUS designer" to make it:
