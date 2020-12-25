@@ -75,10 +75,10 @@ After config other options according to your machine, compile the source code, a
 ## Update the firmware of MKS H43
 The firmware of MKS H43 has been burned before leaving the factory, so it is generally not necessary to update the firmware. But if you need to update the firmware version, or you want to customize the display interface, you can update according to the following method:
 1. Prepare a TF card, format the TF card into FAT32 format, with 4096 bytes aligned.
-2. Download the MKS_DGUS_Desier file on GitHub xxx, enter the folder and there will be a "DEWIN_SET" folder, copy "DEWIN_SET" into the TF card.
-3. Power off the MKS H43, insert the TF card into MKS H43, and reboot it. An automatic update interface will appear on LCD. Waiting for the screen to display the word “end” which indicates that the update is successful. Generally, the update time is within 1 min.
+2. The firmware of MKS H43 can be found on https://github.com/makerbase-mks/MKS-H43/tree/main/DWIN_SET_For_H43, download the version you need. Copy "DWIN_SET" folder to TF card after decompression.
+3. Power off the MKS H43, insert the TF card into MKS H43, then power on. An automatic update interface will appear on LCD. Waiting for the screen to display the word “end” which indicates that the update is successful. Generally, the update time is within 1 min.
 
-note:
+Note:
 1. The insertion and removal of the TF card needs to be done when the power is off.
 2. During the TF card update process, do not directly unplug the TF card, which will easily cause the firmware to be destroyed.
 3. If the LCD doesn't display the blue update interface after the update begin, you should check whether the name of folder is wrong. 
