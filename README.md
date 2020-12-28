@@ -61,8 +61,8 @@ The hardware information of MKS H43 and adaptor boards, you can refer to : https
 
 
 ## Marlin Config
-1. We have added the mks dwin package to Marlin V2 firmware, you can download it from : https://github.com/makerbase-mks/Marlin-V2.X-MKS-H43. At the time of writing this article, Marlin officially has not merged the support of MKS H43, after Marlin merge, you can directly use the official PR.
-2. Just modify the board type on the "platformio.ini" according to your motherboard type, just like:
+1. We have added the support to Marlin V2 firmware and uploaded the source code here: https://github.com/makerbase-mks/Marlin-V2.X-MKS-H43. At the time of writing this article, Marlin officially has not merged the support of MKS H43, after Marlin merge, you can directly use the official one.
+2. Using VSCode to open Marlin source, and modify the motherboard type on the "platformio.ini" according to yours, just like:
 ```
 default_envs = mks_robin_nano
 ```
@@ -83,31 +83,15 @@ Note:
 2. During the TF card update process, do not directly unplug the TF card, which will easily cause the firmware to be destroyed.
 3. If the LCD doesn't display the blue update interface after the update begin, you should check whether the name of folder is wrong. 
 
-## Customize MKS H43 UI and function
-If you want to customize your own UI on MKS H43, or modify some functions, you can using the "DGUS designer" to make it:
-1. Download the two folders "MKS_H43_DGUS" and "MKS_H43_Tool" from https://github.com/makerbase-mks/MKS-H43-firmware.
-2. In the "MKS_H43_Tool" folder, unzip the DGUS designer, find "DGUS Tool V7.597.exe" and run it directly. Open the .hmi file in the "MKS_H43_DGUS" folder through the designer, you can directly open the H43 interface project.
-3. Open "MKS_H43_DGUS", find the folder DWIN_SET and open it.
-4. Modify the corresponding name and replace the picture you have prepared.
-5. Open the designer
-Select the Select Pictures button, select all the pictures in the folder, and the motor Generate ICL will replace 40.icl.
-6. In the TF card, create a folder named "DWIN_SET", and copy the just generated 40.icl into the "DWIN_SET" folder in the TF card, then insert the TF card into the TF card socket of H43 Just power on and update. After waiting for the word “end” to appear on the interface, power off, pull out the TF card, and power on again.
-7. For the function modification of H43, you can continue to add or delete corresponding function controls based on our DGUS project through the DGUS designer. In the H43 project opened by VScode, you can find the two files in the "Marlin/src/lcd/extui/lib/dgus/mks" path and the six files in the upper-level directory, all of which are H43. The functions are mainly concentrated in the file "DGUSScreenHandle.cpp".
-8. In the DGUS designer, the size and position of the control can be freely placed, but the information of the control cannot be changed at will. After changing the size and position of the control, you need to find Generate and click in the File at the top of the designer. After generation, find the files "13TouchFile.bin", "14ShowFile.bin" and "22_Config.bin" in the DWIN_SET folder under the project, and put these files into the DWIN_SET folder in the TF card. Insert the TF card when H43 is powered off, then power on H43 and wait for END to appear! If the word is displayed, the TF card can be removed after power off, and the update is completed when power on again.
+## Customize MKS H43 UI and functions
+If you want to customize your own UI on MKS H43, or modify some functions, you can using the "DGUS Tool" to make it, only support Windows OS so far:
+1. Download the "DGUS_Tool_Vxxx.rar" from https://github.com/makerbase-mks/MKS-H43/tree/main/Tool, this is the tool use to edit the firmware of H43. Decompress it and run the "DGUS Tool Vxxx.exe". The default language is Simplified Chinese, you can config to English on the menu of "配置"(Setting)->Language.
+2. Download the source code of MKS H43 from https://github.com/makerbase-mks/MKS-H43-firmware, open the project file "DWprj.hmi" file with the DGUS Tool above.
+3. Now you can change the size of images/replace your own images or modify the execute functions and so on. More details about how the operate steps, please refer on https://github.com/makerbase-mks/MKS-H43-firmware .
+4. After your modification, select the "DWIN ICL Generator" on DGUS TOOL's welcome page, it will generate the files for burned.
+5. Copy the "DWIN SET" folder to the TF card(make sure it has been formated as FAT32 format with 4096 bytes aligned before, and insert it into MKS H43 board, reboot the board and it would update automatically.
+Note: About the detail about customizing the UI and functions, pleas refer to https://github.com/makerbase-mks/MKS-H43-firmware.
 
-Note:
-- When you are in the picture, you need to open the project first, otherwise the path you go to when you click DWIN ICL Generator is not in the DWIN_SET folder.
-- During the update process, H43 cannot be powered off directly, and can be powered off only after the update is completed.
-- When H43 modifies the control by itself, do not modify the important attributes such as the ID of the control, and only drag or zoom in and out of the control will not affect the motherboard code.
-
-
-# WIKI
-## Use MKS H43 with RAMPS 1.4 board
-## Use MKS H43 with MKS GEN_L board
-## Use MKS H43 with MKS SGEN_L board
-## Use MKS H43 with MKS Robin Nano V1.2/V2.0 board
-## Use MKS H43 with MKS Robin Nano V3.0 board
-## Use MKS H43 with MKS Robin E3/E3D/E3P board
 
 
 
