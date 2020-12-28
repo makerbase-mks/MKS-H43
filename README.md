@@ -91,7 +91,7 @@ If you want to customize your own UI on MKS H43, or modify some functions, you c
 4. After your modification, select the "DWIN ICL Generator" on DGUS TOOL's welcome page, it will generate the files for burned.
 5. Copy the "DWIN SET" folder to the TF card(make sure it has been formated as FAT32 format with 4096 bytes aligned before, and insert it into MKS H43 board, reboot the board and it would update automatically.
 
-Note: About the detail about customizing the UI and functions, please download the [T5L_DGUSII Application Development Guide](https://github.com/makerbase-mks/MKS-H43/blob/main/Tool/T5L_DGUSII%20Application%20Development%20Guide20200902.pdf).
+Note: More detail about customizing the UI and functions, please download the [T5L_DGUSII Application Development Guide](https://github.com/makerbase-mks/MKS-H43/blob/main/Tool/T5L_DGUSII%20Application%20Development%20Guide20200902.pdf).
 
 
 
