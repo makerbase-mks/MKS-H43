@@ -28,7 +28,7 @@ __________________________________________________________________________
 ```
 
 # Motherboards support
-MKS H43 is a serial LCD, it uses the TTL-UART to communicate with motherboards. So in theory, MKS H43 supports all motherboards with serial communication and running marlin V2.X firmware. As there are so many types of 3d printer motherboards, different motherboard has different uart available and unavailabe, so we make some test of the compatibility of MKS H43 and some motherboards, please refer to the **wiki page**.
+MKS H43 is a serial LCD, it uses the TTL-UART to communicate with motherboards. So in theory, MKS H43 supports all motherboards with serial communication and running marlin V2.X firmware. As there are so many types of 3d printer motherboards, different motherboard has different uart available and unavailabe, so we make some test of the compatibility of MKS H43 and some motherboards, please refer to the [wiki page](https://github.com/makerbase-mks/MKS-H43/wiki).
 
 # How to use
 ## Hardware connect
@@ -55,7 +55,7 @@ There are many situations for different motherboards:
 - Only with the shared serial with PC connection, you can only use MKS H43 without PC connection.
 - No serial interface(very rare), cannot use MKS H43
 
-And for different motherboards, you can refer to the detail connection and configuration on **WIKI**.
+And for different motherboards, you can refer to the detail connection and configuration on [WIKI](https://github.com/makerbase-mks/MKS-H43/wiki).
 
 The hardware information of MKS H43 and adaptor boards, you can refer to : https://github.com/makerbase-mks/MKS-H43/tree/main/hardware.
 
