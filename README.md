@@ -64,7 +64,7 @@ The hardware information of MKS H43 and adaptor boards, you can refer to : https
 1. We have added the support to Marlin V2 firmware and uploaded the source code here: https://github.com/makerbase-mks/Marlin-V2.X-MKS-H43. At the time of writing this article, Marlin officially has not merged the support of MKS H43, after Marlin merge, you can directly use the official one.
 2. Using VSCode to open Marlin source, and modify the motherboard type on the "platformio.ini" according to yours, just like:
 ```
-default_envs = mks_robin_nano
+default_envs = mks_robin_nano35
 ```
 3. Config the MKS DWIN
 - Open the "Configuration.h" file, find "DGUS_LCD_UI_MKS" and enable it,
