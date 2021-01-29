@@ -60,8 +60,12 @@ And for different motherboards, you can refer to the detail connection and confi
 The hardware information of MKS H43 and adaptor boards, you can refer to : https://github.com/makerbase-mks/MKS-H43/tree/main/hardware.
 
 
-## Marlin Config
-1. We have added the support to Marlin V2 firmware and uploaded the source code here: https://github.com/makerbase-mks/Marlin-V2.X-MKS-H43. At the time of writing this article, Marlin officially has not merged the support of MKS H43, after Marlin merge, you can directly use the official one.
+## Motherboard firmware
+We have added the support to Marlin V2 firmware and uploaded the source code here: https://github.com/makerbase-mks/Marlin-V2.X-MKS-H43. At the time of writing this article, Marlin officially has not merged the support of MKS H43, after Marlin merge, you can directly use the official one.
+### For Creality Ender3
+There is a compiled-Marlin version for Creality Ender3 raw board Creality V1.1.4 on https://github.com/makerbase-mks/MKS-H43/tree/main/Marlin_firmware_released. It was compiled from the source code: https://github.com/makerbase-mks/Marlin-V2.X-MKS-H43, and had added the support of MKS H43.
+### Marlin Config
+1. Download the source frome: https://github.com/makerbase-mks/Marlin-V2.X-MKS-H43.
 2. Using VSCode to open Marlin source, and modify the motherboard type on the "platformio.ini" according to yours, just like:
 ```
 default_envs = mks_robin_nano35
