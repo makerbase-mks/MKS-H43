@@ -97,6 +97,8 @@ If you want to customize your own UI on MKS H43, or modify some functions, you c
 
 Note: More detail about customizing the UI and functions, please download the [T5L_DGUSII Application Development Guide](https://github.com/makerbase-mks/MKS-H43/blob/main/Tool/T5L_DGUSII%20Application%20Development%20Guide20200902.pdf).
 
+## Shell and mounting bracket model
+Stl files for Shell and mounting bracket modles of MKS H43 can be downloaded from: https://www.thingiverse.com/thing:4720988
 
 
 
