@@ -26,7 +26,7 @@ __________________________________________________________________________
    Communicate Protocol          DWIN DGUS
 __________________________________________________________________________
 ```
-
+![](https://github.com/makerbase-mks/MKS-H43/blob/main/Images/BLUE_GREEN.png)
 # Motherboards support
 MKS H43 is a serial LCD, it uses the TTL-UART to communicate with motherboards. So in theory, MKS H43 supports all motherboards with serial communication and running marlin V2.X firmware. As there are so many types of 3d printer motherboards, different motherboard has different uart available and unavailabe, so we make some test of the compatibility of MKS H43 and some motherboards, please refer to the [wiki page](https://github.com/makerbase-mks/MKS-H43/wiki).
 
