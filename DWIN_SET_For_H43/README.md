@@ -1,4 +1,4 @@
-# Updata
+# Update logs
 
 ## Data:2021/02/09       Version: V1.31
 
