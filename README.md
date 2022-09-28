@@ -1,7 +1,7 @@
 # MKS-H43
 MKS H43 is a 4.3-inch high-definition IPS display with a resolution of 800*480 and uses a capacitive touch screen. It is a high-end screen, which be adapted to most FDM 3D printer motherboards on the market， very suitable for 3D printer upgrades.
 ![](https://github.com/makerbase-mks/MKS-H43/blob/main/Images/H43.png)
-# Feathers
+# Features
 ```
 —————————————————————————————————————————————————————————————————————————
    Display Size                  4.3 inches
